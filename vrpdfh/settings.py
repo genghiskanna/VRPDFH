@@ -26,7 +26,7 @@ SECRET_KEY = '5a2p%t#k$o-%gf+qexku46u@u_ddk0k7y=iq!(4*=l45jowp_4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','vrpdfh.heroku.com']
+ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','vrpdfh.herokuapp.com']
 
 
 # Application definition
