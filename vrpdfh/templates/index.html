@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+ 
+{% block content %}
+
+<!--products starts here-->
+        <div class="container">
+<form action="/process/" enctype="multipart/form-data" method="post">
+{% csrf_token %}
+
+        <div class="row">
+
+                <div class="col l12">
+                    <h3>Select .xlsx File to upload:</h3>
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>Select File</span>
+                        <input type="file" name="excel_file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" name="excel_file" id="excel_file">
+                      </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col l12">
+                      <button class="btn waves-effect waves-light" type="submit" name="action">Process
+                        <i class="material-icons right">send</i>
+                        </button>
+                </div>
+        </div>
+
+</form>
+
+    <h2>Data Format:</h2>
+    <ul>
+        <li>.xlsx file format(Microsoft Excel 2007 and above)</li>
+        <li>Data in first sheet</li>
+        <li>Node name, node id, node x, node y, node pickup, node delivery respectively</li>
+        <li><b>No Cells should be left blank. zero must be filled in blank cells</b></li>
+        <li>The depot should be at the last in excel file and should have the name "Depot"</li>
+
+    </ul>
+    </div>
+{% endblock content %}

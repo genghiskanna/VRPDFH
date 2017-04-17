@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+        <title>{% block title %}{% endblock title %}</title>
+
+        {% load static %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "css/materialize.css" %}">
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+
+    </head>
+
+    <body>
+            <div class="page-wrap">
+                  <nav>
+                    <div class="nav-wrapper green">
+                      <a href="/" class="brand-logo left">VRP</a>
+                    </div>
+                  </nav>
+
+
+                    {% block content %}
+
+                    {% endblock %}
+            </div>
+
+
+
+
+            <script type="text/javascript" src="{% static "js/chart.js" %}"></script>
+            <script type="text/javascript" src="{% static "js/materialize.min.js" %}"></script>
+            <script type="text/javascript" src="{% static "js/init.js" %}"></script>
+    </body>
+
+</html>

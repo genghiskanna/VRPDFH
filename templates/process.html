@@ -1,0 +1,72 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Process
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <a href="/">Go To home..</a>
+            <div class="col l12">
+                <h4>Download Excel Files:</h4>
+                <a href="/media/linearanswer.xls">Linear</a><br>
+                <a href="/media/linearskipanswer.xls">Linear Skip</a><br>
+                <a href="/media/dfhanswer.xls">DFH</a><br>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4>Simple LSA</h4>
+            <div class="col l12">
+                <canvas id="line-chart-linear"></canvas>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4>LSA with skip</h4>
+            <div class="col l12">
+                <canvas id="line-chart-skip"></canvas>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <h4>DFH</h4>
+            <div class="col l12">
+                <canvas id="line-chart-dfh"></canvas>
+            </div>
+        </div>
+
+
+        <!-- Utilization -->
+
+        <div class="row">
+            <h4>Average Utilization</h4>
+            <div class="col l12">
+                <canvas id="bar-chart"></canvas>
+            </div>
+        </div>
+
+
+        <!-- Distance -->
+
+        <div class="row">
+            <h4>Total Distance Per Truck</h4>
+            <div class="col l12">
+                <h5>Linear</h5>
+                <canvas id="bar-chart-distance"></canvas>
+            </div>
+        </div>
+
+
+    <script type="text/javascript">
+        var chart_vrp_x = {{ chart_vrp_x }}
+        var chart_vrp_y = {{ chart_vrp_y }}
+        var util = {{ util }}
+        var total_distance = {{ total_distance }}
+    </script>
+{% endblock %}
