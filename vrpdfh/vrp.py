@@ -80,14 +80,18 @@ def CalculateInitLoad(nodes, skip):
             if (initLoad + node.nodeDelivery) <= 100:
                 initLoad += node.nodeDelivery
                 assigned_nodes.append(node)
+                '''
             elif skipFlag < 3:
                 skipFlag += 1
             else:
                 break
+                '''
     else:
         for node in nodes:
             if (initLoad + node.nodeDelivery) <= 100:
                 initLoad += node.nodeDelivery
                 assigned_nodes.append(node)
+            else:
+                break
 
     return initLoad, assigned_nodes
